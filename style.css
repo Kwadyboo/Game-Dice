@@ -11,14 +11,15 @@ body {
     background-color: rgb(248, 185, 185);
     font-family: Lato;
     font-weight: 300;
-    height: 100vh;
+    height: 80vh;
     color: rgb(105, 45, 45);
 }
 
 h1{
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: 300;
 }
+
 
 /* PLAYERS */
 
@@ -37,7 +38,7 @@ h1{
     font-size: 1.8em;
     font-weight: 600;
     color: #EB4D4D;
-    margin-bottom: 8em;
+    margin-bottom: 4em;
 }
 
 .active { background-color: #f7f7f7; }
