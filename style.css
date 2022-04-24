@@ -13,18 +13,32 @@ body {
     font-weight: 300;
     height: 80vh;
     color: rgb(105, 45, 45);
+    font-size: 2.5vh;
 }
 
 h1{
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 300;
+}
+
+details {
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+.container-new{
+    margin:0.2em;
 }
 
 
 /* PLAYERS */
 
+.player-panel{
+   margin:0.5em;
+}
+
 .player-name {
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -47,7 +61,7 @@ h1{
 .player-current-box {
     background-color: #EB4D4D;
     color: #fff;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     padding: 0.5em;
     text-align: center;
@@ -55,13 +69,13 @@ h1{
 
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 1.2em;
-    font-size: 1.1em;
+    margin-bottom: 1em;
+    font-size: 0.8em;
     color: #222;
 }
 
 .player-current-score {
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 
 /* PLAYER WINNER */
@@ -72,8 +86,9 @@ h1{
 /* DICE */
 
 .dice {
-    height: 8em;
-    margin: 0.5em;
+    height: 12vh;
+    margin-bottom: 1.8em;
+    margin-top: 1em;
 }
 
 /* BUTTON */
@@ -85,7 +100,7 @@ button {
 }
 
 button:hover { font-weight: 600; }
-button:hover i { margin-right: .5em; }
+button:hover i { margin-right: 0.5em; }
 
 button:focus {
     outline: none;

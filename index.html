@@ -9,64 +9,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
     <link href="style.css" type="text/css" rel="stylesheet">
-    <link rel="icon" href="img/dice-6-fill.svg" />
+    <link rel="icon" href="img/dice-6.svg" />
     <title>Dice Game</title>
 </head>
 
 <body>
+    <details>
+    <summary><i class="bi bi-journal-text"></i>Rules</summary>
+        GAME RULES:
+            The game has 2 players, playing in rounds<br>
+            In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score<br>
+            BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn<br>
+            The player can choose to HOLD, which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn<br>
+            The first player to reach 100 points on GLOBAL score wins the game<br>
+    </details>
     <h1 class="text-center m-2">Dice Game</h1>
-    <div class="container">
-        <div class="row text-center gx-2">
-            <div class="col">
-                <button class="btn-new p-3"><i class="bi bi-plus"></i></i>New game</button>
-            </div>
-            <div class="col">
-                <button type="button" class="myPopover p-3" data-bs-container="body" data-bs-toggle="popover"
-                    data-bs-placement="bottom" data-bs-title="Les règles du jeu" data-bs-content="Le jeu se joue à 2 joueurs.
-                    Chaque joueur possède un score temporaire et un score global.
-                    À chaque tour, le joueur a son score temporaire initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le
-                    résultat d’un lancer est ajouté au score temporaire.
-                    Lors de son tour, le joueur peut décider à tout moment de:
-                    - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du temporaire vers le score global. Ce sera alors le
-                    tour de l’autre joueur.
-                    - Lancer le dé. S’il obtient un 1, son score temporaire est perdu et c’est la fin de son tour.
-                    Le premier joueur qui atteint 100 points gagne le jeu.">
-                    <i class="bi bi-journal-text"></i>Rules
-                </button>
-            </div>
-        </div>
+    <div class="container-new text-center">
+        <button class="btn-new p-3"><i class="bi bi-plus"></i></i>New game</button>
     </div>
-    <div class="container-fluid ">
-        <div class="container">
-            <div class="row">
-                <div class="col-5 col-sm-12 player-0-panel active">
-                    <div class="player-name" id="name-0">Player 1</div>
-                    <div class="player-score" id="score-0">43</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Current</div>
-                        <div class="player-current-score" id="current-0">11</div>
-                    </div>
+    <div class="container-fluid player-panel">
+        <div class="row">
+            <div class="col-5 col-sm-4 player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
                 </div>
-                <div class="col-2 col-sm-12 g-3">
-                    <div class="text-center">
+            </div>
+            <div class="col-2 col-sm-4">
+                <div class="container px-1">
+                    <div class="row">
                         <img src="img/dice-2.svg" alt="Dice" class="dice rounded">
                     </div>
-                    <div class="g-2 col-5 mx-auto">
-                        <button class="btn-roll"><i class="bi bi-arrow-clockwise"></i>Roll dice</button>
-                        <button class="btn-hold"><i class="bi bi-arrow-down-square"></i>Hold</button>
-                    </div>
-                </div>
-                <div class="col-5 col-sm-12 player-1-panel">
-                    <div class="player-name" id="name-1">Player 2</div>
-                    <div class="player-score" id="score-1">72</div>
-                    <div class="player-current-box">
-                        <div class="player-current-label">Current</div>
-                        <div class="player-current-score" id="current-1">0</div>
+                    <div class="row g-3">
+                        <button class="col-12 btn-roll"><i class="bi bi-arrow-clockwise"></i>Roll dice</button>
+                        <button class="col-12 btn-hold"><i class="bi bi-arrow-down-square"></i>Hold</button>
                     </div>
                 </div>
             </div>
+            <div class="col-5 col-sm-4 player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
 
 
@@ -78,7 +68,6 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
 
     <script src="script.js"></script>
 </body>

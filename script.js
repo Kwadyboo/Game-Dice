@@ -2,8 +2,8 @@ let scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
-document.querySelector('.btn-roll').addEventListener('click', function() {
-    if(gamePlaying) {
+document.querySelector('.btn-roll').addEventListener('click', function () {
+    if (gamePlaying) {
         // 1. Chiffre aléatoire / Random number
 
         let dice = Math.floor(Math.random() * 6) + 1;
@@ -29,11 +29,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
             nextPlayer();
         }
-    }    
+    }
 });
 
 
-document.querySelector('.btn-hold').addEventListener('click', function() {
+document.querySelector('.btn-hold').addEventListener('click', function () {
     if (gamePlaying) {
 
         // Ajoute le score CURRENT au score GLOBAL / Add CURRENT score to GLOBAL score
@@ -85,7 +85,7 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-    
+
     document.querySelector('.dice').style.display = 'none';
 
     document.getElementById('score-0').textContent = '0';
@@ -100,16 +100,3 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
 }
-
-// Affichage des règles dans une popover / Display of rulers in a popover
-
-$(function(){
-    $(".myPopover").popover();
- });
- 
-
-
-
-
-
-
